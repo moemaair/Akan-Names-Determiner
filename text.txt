@@ -1,0 +1,53 @@
+ 
+ USER STORY
+ As a user, I would like to;
+
+-DONE- See a  small description of what the application does on the landing page.
+Enter my birthday through a form 
+Choose what gender I am.
+Click the submit button to see what my Akan name would be
+ 
+ The following is one of the many methods that exist for that;
+ Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
+
+ where;
+
+ CC - is the century digits. For example 1989 has CC = 19
+
+ YY - is the Year digits (1989 has YY = 89)
+
+ MM -  is the Month
+
+ DD - is the Day of the month 
+
+ mod - is the modulus function ( % )
+
+ Male
+Sunday: Kwasi
+
+Monday: Kwadwo
+
+Tuesday: Kwabena
+
+Wednesday: Kwaku
+
+Thursday:  Yaw
+
+Friday: Kofi
+
+Saturday: Kwame
+
+Female
+Sunday: Akosua
+
+Monday: Adwoa
+
+Tuesday: Abenaa
+
+Wednesday: Akua
+
+Thursday:  Yaa
+
+Friday: Afua
+
+Saturday: Ama

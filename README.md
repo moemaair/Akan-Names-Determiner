@@ -48,10 +48,8 @@ Description About:
 
 [Link to your awesome Demo](#) 
 
-[Another Link to your awesome Demo](#)
-
 ### Code Demo
-![]()
+![Back to Markup code](https://github.com/moemaair/Akan-Names-Determiner)
 
 ### Technologies Use
  
