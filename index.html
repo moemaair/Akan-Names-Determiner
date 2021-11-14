@@ -14,16 +14,11 @@
     <title>Akan Names</title>
   </head>
   <body>
-  
-   
 
-
-
-
-    <!-- actual project -->
    <div class="wrapper">
     <!-- side-bar -->
-    <section>
+   
+    <section class="side-bar-container">
       <i class="fas fa-bars p-4 position-absolute"></i>
       <div class="side-bar">
         <section class="container p-2 side-bar-nav">
@@ -95,39 +90,43 @@
       </div>
     </section>
     <!-- forms -->
-    <section class="form">
+    <section class="form flex-column">
+      <h1 class="container ">Your Akan Name is : <span class="your-akan-name text-secondary"</span></h1>
       <form class="container form-container ">
         <div class="mb-3">
-          <label for="year" class="form-label" >Year Of Birth</label>
-          <input type="text" class="form-control" id="yearOfBirth" placeholder='example: "1972"' >
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <!-- century digits -->
+          <label for="year" class="form-label" >Year</label>
+          <input type="text" class="form-control" max="2021" min="1900" id="year" placeholder='Example:"1995"' >
         </div>
         <div class="mb-3">
+          <!-- Year digits -->
           <label for="month" class="form-label">Month</label>
-          <input type="text" class="form-control" id="Month" placeholder='example January for: "01"'>
+          <input type="number" class="form-control"  max="12" min="1"id="month" placeholder='Example: "1" for january'>
         </div>
         <div class="mb-3">
+          <!-- Month Born -->
           <label for="day" class="form-label">Day</label>
-          <input type="text" class="form-control" id="Day" placeholder='example: "31"' >
+          <input type="number" class="form-control" max="31" min="1" id="Month" placeholder='Example: "4" ' >
         </div>
+      
         <div class="mb-3 form-check">
           <!-- Male checkbox -->
           <section>
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" value="male" class=" form-check-input form-check-input-male" id="exampleCheck1">
   
             <label class="form-check-label" for="exampleCheck1">Male</label>
     
           </section>
           <!-- Female checkbox -->
           <section>
-            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+            <input type="checkbox"value="female" class=" form-check-input form-check-input-female" id="exampleCheck2">
   
             <label class="form-check-label" for="exampleCheck1">Female</label>
     
           </section>
         </div>
         <button type="cancel" class="btn cancel ">Cancel</button>
-        <button type="submit" class="btn bg-body">Submit</button>
+        <button type="button" class="btn submit bg-body">Submit</button>
       </form>
     </section>
     <!-- end of form section -->
