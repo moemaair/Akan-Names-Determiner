@@ -28,6 +28,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 3rem;
  
 }
 .side-bar{
@@ -98,12 +99,22 @@ tr:nth-child(even){
   .form-container {
     z-index: 100;
   }
- .side-bar{
- }
+ 
   .side-bar-container{
    height: 100vh;
    width: 100vw;
   }
  
+  
+}
+@media screen and (max-width:1200px) {
+  .side-bar{
+    width: 100vw;
+    height: 100vh;
+  }
+  .form{
+    margin-top: 10rem;
+    display: none;
+  }
   
 }
