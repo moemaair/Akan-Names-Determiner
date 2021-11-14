@@ -90,31 +90,40 @@ tr:nth-child(even){
  
   }
   .form{
-   width: 100vw;
-   z-index: -1;
-   transform: scale(0.5);
+   width: 100vw;height: 100vh;
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+   padding:0 5%;
    
-
   }
-  .form-container {
-    z-index: 100;
-  }
- 
-  .side-bar-container{
-   height: 100vh;
+  
+ .side-bar{
+   display: none;
+   height: auto;
    width: 100vw;
-  }
+   padding-bottom: 1rem;
+   border-radius: 0 0 30px 30px;   
+ }
  
   
 }
-@media screen and (max-width:1200px) {
-  .side-bar{
-    width: 100vw;
-    height: 100vh;
-  }
-  .form{
-    margin-top: 10rem;
-    display: none;
-  }
+@media screen and (min-width: 451px) and (max-width:1200px) {
+  
+.wrapper{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.form{
+  height: 100vh;
+  display: flex !important ; 
+  justify-content: center;
+  align-items: center;
+  margin-top: -4rem;
+}
+.side-bar{
+  height: 50vh;
+}
   
 }
