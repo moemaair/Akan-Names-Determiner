@@ -75,7 +75,7 @@ $ git clone git@github.com:moemaair/Akan-Names-Determiner.git
 ```
 ### Screenshots
 
-![Desktop Screenshoot](./desktop-screenshot.png)
+![Desktop Screenshoot](/desktop-screenshot.png)
 ### Authors or Acknowledgments
 
 *   Mohamed Ibrahim
