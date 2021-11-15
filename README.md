@@ -46,10 +46,23 @@ Description About:
 
 ### Demo -> 
 
-[Link to your awesome Demo](#) 
+[Demo](https://moemaair.github.io/Akan-Names-Determiner/) 
 
 ### Code Demo
 ![Back to Markup code](https://github.com/moemaair/Akan-Names-Determiner)
+
+### Formula
+DayOfTheWeekBorn = (LastTwodigitOfyourYear + (100 * 5) /4 + 4) % 7
+
+Note: the First digit after . in your decimal you would want to check where the Month Code it appers in.
+# Month code
+* Sunday - 1
+* Monday - 2
+* Tuesday - 4
+* Wednesday - 5
+* Thursday - 7
+* Friday - 8
+* Saturday  - No decimal.
 
 ### Technologies Use
  
