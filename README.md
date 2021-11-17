@@ -1,4 +1,3 @@
-![](logo.png)
 
 Project Title - Akan-Names-Determiner
 =======================================
@@ -44,7 +43,7 @@ Description About:
 * Saturday: Ama
 
 
-### Demo -> 
+### ≠≠≠ Demo ≠≠≠ 
 
 [Demo](https://moemaair.github.io/Akan-Names-Determiner/) 
 
@@ -52,24 +51,18 @@ Description About:
 ![Back to Markup code](https://github.com/moemaair/Akan-Names-Determiner)
 
 ### Formula
-DayOfTheWeekBorn = (LastTwodigitOfyourYear + (100 * 5) /4 + 4) % 7
+dayofTheWeekBorn = (dayBorn + monthCode + yy + Math.floor(yy/4) + centuryCode ) % 7;
 
 Note: the First digit after . in your decimal you would want to check where the Month Code it appers in.
-# Month code
-* Sunday - 1
-* Monday - 2
-* Tuesday - 4
-* Wednesday - 5
-* Thursday - 7
-* Friday - 8
-* Saturday  - No decimal.
+
 
 ### Technologies Use
  
  * HTML5
  * CSS3
+ * BOOTSTRAP
  * GIT
- * JAVASCRIPT ES6
+ * JAVASCRIPT 
 
 ### Download & Installation
 check ⬇ to have a copy of my Project
@@ -89,6 +82,7 @@ $ git clone git@github.com:moemaair/Akan-Names-Determiner.git
 ### Screenshots
 
 ![Desktop Screenshoot](desktop-screenshot.png)
+![Mobile Screenshoot](mobile-view.png)
 ### Authors or Acknowledgments
 
 *   Mohamed Ibrahim
