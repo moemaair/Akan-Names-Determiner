@@ -18,10 +18,10 @@
    <div class="wrapper">
     <!-- side-bar -->
    
-    <section class="side-bar-container">
+    <section class="side-bar-container ">
       <i class="fas fa-bars p-4 position-absolute"></i>
       <div class="side-bar">
-        <section class="container p-2 side-bar-nav">
+        <section class="container p-2 side-bar-nav d-flex justify-content-between">
           <h3 class="text-black position-relative">Akan Names</h3>
           <i class="fas fa-times p-2 rounded"></i>
         </section>
@@ -30,7 +30,7 @@
            <p class="">The Akan people of Ghana <span class="p-1">🇬🇭 </span> frequently name their children after the day of the week they were born and the order in which they were born. These <span class="text-white rounded" style="background-color: #BFADA3;">"day names"</span> have further meanings concerning the soul and character of the person. Middle names have considerably more variety and can refer to their birth order, twin status, or an ancestor's middle na</p>
            <div class="learn-more"><a href="https://en.wikipedia.org/wiki/Akan_names">Learn More</a></div>
           <!-- table -->
-          <table class="table mt-5">
+          <table class="table mt-5 ">
             <thead>
               <tr>
                 <th scope="col">Days</th>
@@ -106,27 +106,27 @@
         <div class="mb-3">
           <!-- Month Born -->
           <label for="day" class="form-label">Day</label>
-          <input type="number" class="form-control" max="31" min="1" id="Month" placeholder='Example: "4" ' >
+          <input type="number" class="form-control" max="31" min="1" id="day" placeholder='Example: "4" ' >
         </div>
       
         <div class="mb-3 form-check">
           <!-- Male checkbox -->
           <section>
-            <input type="checkbox" value="male" class=" form-check-input form-check-input-male" id="exampleCheck1">
+            <input type="checkbox" value="male" name="male" class=" form-check-input form-check-input-male" id="exampleCheck">
   
             <label class="form-check-label" for="exampleCheck1">Male</label>
     
           </section>
           <!-- Female checkbox -->
           <section>
-            <input type="checkbox"value="female" class=" form-check-input form-check-input-female" id="exampleCheck2">
+            <input type="checkbox" value="female" name="female" class=" form-check-input form-check-input-female" id="exampleCheck">
   
             <label class="form-check-label" for="exampleCheck1">Female</label>
     
           </section>
         </div>
-        <button type="cancel" class="btn cancel ">Cancel</button>
-        <button type="button" class="btn submit bg-body">Submit</button>
+        <button type="cancel" class="btn cancel " >Cancel</button>
+        <button type="button" class="btn submit bg-body" >Submit</button>
       </form>
     </section>
     <!-- end of form section -->
