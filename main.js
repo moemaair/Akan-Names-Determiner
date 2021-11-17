@@ -3,55 +3,49 @@
  const close = document.querySelector('.fa-times')
  const hamburger = document.querySelector('.fa-bars')
  const form = document.querySelector('.form');
-
- const year = document.querySelector('#year');
-
- const month = document.querySelector('#month');
- const Day = document.querySelector('#day');
-
  const submit =document.querySelector('.submit')
- // output
+
  const akanName = document.querySelector('.your-akan-name');
- // checkbox
+ 
 
 
   /****************MONTH******************************/
-month.addEventListener('change', ()=>{
-  if (month.value > 12 ||month.value <= 0  ){
-    month.style.borderColor ="red"
-    month.style.borderWidth ="2" + "px"
-    month.style.backgroundColor ="#d8f3dc"
-  }
-  else{
-    month.style.borderColor = "green"
-    month.style.backgroundColor ="#d8f3dc"
-  }
-})
-  /****************YEAR******************************/
-year.addEventListener('change', ()=>{
-  if (year.value <= 1600){
-    year.style.borderColor ="red"
-    year.style.borderWidth ="2" + "px"
-    year.style.backgroundColor ="#d06267"
-  }
-  else{
-    year.style.borderColor = "green"
-    year.style.backgroundColor ="#d8f3dc"
-  }
-})
-  /****************DAY******************************/
-Day.addEventListener('change', ()=>{
-  if (Day.value > 31){
-    Day.style.backgroundColor ="#d06267"
-    Day.style.borderColor ="red"
-    Day.style.borderWidth ="2" + "px"
-  }
-  else{
-    Day.style.backgroundColor ="#d8f3dc"
-    Day.style.borderColor = "green"
-    Day.style.borderWidth ="2" + "px"
-  }
-})
+// const month=document.querySelector('#month').addEventListener('change', ()=>{
+//   if (month.value > 12 ||month.value <= 0  ){
+//     month.style.borderColor ="red"
+//     month.style.borderWidth ="2" + "px"
+//     month.style.backgroundColor ="#d8f3dc"
+//   }
+//   else{
+//     month.style.borderColor = "green"
+//     month.style.backgroundColor ="#d8f3dc"
+//   }
+// })
+//   /****************YEAR******************************/
+// const year = document.querySelector('#month').addEventListener('change', ()=>{
+//   if (year.value <= 1600){
+//     year.style.borderColor ="red"
+//     year.style.borderWidth ="2" + "px"
+//     year.style.backgroundColor ="#d06267"
+//   }
+//   else{
+//     year.style.borderColor = "green"
+//     year.style.backgroundColor ="#d8f3dc"
+//   }
+// })
+//   /****************DAY******************************/
+//   const day=document.querySelector('#month').addEventListener('change', ()=>{
+//   if (day.value > 31){
+//     day.style.backgroundColor ="#d06267"
+//     day.style.borderColor ="red"
+//     day.style.borderWidth ="2" + "px"
+//   }
+//   else{
+//     Day.style.backgroundColor ="#d8f3dc"
+//     Day.style.borderColor = "green"
+//     Day.style.borderWidth ="2" + "px"
+//   }
+// })
 
 
     /***************OPEN*******************************/
@@ -81,45 +75,75 @@ Day.addEventListener('change', ()=>{
 
   /***************SUBMIT TO RUN APPLICATION*******************************/
 
+
   submit.addEventListener('click', ()=>{
-    // formula
-    // const dayoftheweek = dateborn + monthcode + last2digit + last2digit/4 + centurycode
-    const yearArr = String(year).split("").map((nuyearm)=>{
-      return Number(year)
-    })
-    const last2digit = `${last2digit[2]}${last2digit[3]}`;
-    console.log(last2digit)
-    const monthcode={
-      January : 0, 
-      February : 3 ,
-      March : 3,
-      April : 6,
-      May  : 1,
-      June  :4 ,
-      July :  6,
-      August :  2,
-      September :  5,
-      October :  0,
-      November :  3,
-      December :  5
-    }
-     // century code
-  // 1600 - 1699 => 6
-  // 1700 - 1799 => 6
-  // 1800 - 1899 => 6
-  // 1900 - 1999 => 6
-  // 2000 - 2099 => 6
+   var yearBorn = document.querySelector('#year').value;
+   var monthBorn = document.querySelector('#month').value;
+   var dayBorn = document.querySelector('#day').value;
+   var month = [1,2,3,4,5,6,7,8,9,10,11,12]
+   var century = parseInt(yearBorn.slice(0,1));
+   var yy=parseInt(yearBorn.slice(2,4));
+   
+   var monthCode = 0;
+  
+   if(monthBorn === 1 || monthBorn === 10){
+    monthCode = 0
+   }
+   else if(monthBorn === 5){
+     monthCode = 1
+   }
+   else if(monthBorn === 8){
+     monthCode = 2
+   }
+   else if(monthBorn === 2|| monthBorn === 3|| monthBorn === 11){
+     monthCode = 3
+   }
+   else if(monthBorn === 6){
+     monthCode = 4
+   }
+   else if(monthBorn === 9 ||monthBorn === 12 ){
+     monthCode = 5
+   }
+   else if(monthBorn === 4 || monthBorn === 7){
+     monthCode = 6
+   }
+   else{
+     console.log("you dont have a monthCode")
+   }
+
+  var centuryCode = 0
+
+  if(century === 19){
+    centuryCode =0
+  }
+  if(century === 18){
+    centuryCode =2
+  }
+  if(century === 17){
+    centuryCode =4
+  }
+  if(century === 20){
+    centuryCode =6
+  }
  
-
-
-  // checkbox
-  // let checkbox = document.querySelector('input[type="checkbox"]:checked').value
-
+var weekDayBorn = ["sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var MaleBornName = ["kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi","Kwame" ]
+var FemaleBornDay = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua","Ama" ]
+var gender = document.querySelector('input[type = "checkbox"]:checked').value
+var dayofTheWeekBorn = (dayBorn + monthCode + yy + Math.floor(yy/4) + centuryCode ) % 7;
  
-
-
-
-
+if(monthBorn === 2 && yy%4!==0 && dayBorn > 28){
+   alert("NOT A LEAP YEAR");
+}
+else if(monthBorn === 2 && yy%4!==0 && dayBorn > 29){
+  alert("ENTER A DAY 1-29");
+}
+else if(gender == "male"){
+  alert("You Were Born on a: " + weekDayBorn[dayofTheWeekBorn] + " Your Akan Name is going to be:  " + MaleBornName[dayofTheWeekBorn]);
+}
+else if(gender == "female"){
+alert("You Were Born on a: " + weekDayBorn[dayofTheWeekBorn] + " Your Akan Name is going to be:  " + FemaleBornDay[dayofTheWeekBorn]);
+}
 
   })
  
